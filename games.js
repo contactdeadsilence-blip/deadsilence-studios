@@ -3,7 +3,7 @@ window.GAMES = [
  {id:"pixel-dudes-brawl",featured:true,title:"Pixel Dudes Brawl",tag:"Online party brawler",cover:"img/pdb-cover.png",shots:["img/pdb-cover.png"],
   desc:"A chaotic pixel platform fighter for you and your friends. Brawl online or locally with controllers, run 2v2s and tournaments, grab melee weapons, unlock skins, hats, trails and KO effects in the store, and fight for the jackpot in the Money Pit, where coins never stop raining.",
   play:"https://pixel-dudes-brawl.onrender.com",playLabel:"Play in Browser",
-  download:"https://github.com/contactdeadsilence-blip/pixel-dudes-brawl/releases/download/v1.0.1/Pixel-Dudes-Brawl-Setup-1.0.1.exe",downloadLabel:"Download for Windows",releaseApi:"https://api.github.com/repos/contactdeadsilence-blip/pixel-dudes-brawl/releases/latest"},
+  download:"downloads/Pixel-Dudes-Brawl-Setup.exe",downloadLabel:"Download for Windows"},
  {id:"prop-hunt",title:"Prop Hunt",tag:"3D hide & seek shooter",cover:"img/prop-cover.png",shots:["img/prop-1.png","img/prop-2.png"],
   desc:"Hide as anything. Hunt everything. A 3D hide-and-seek shooter that runs right in your browser. Props disguise themselves as furniture and objects, and hunters have limited time to find them. It has 4 maps (House, School, Supermarket, Spooky Mansion) with map voting, prop abilities (decoy, dash, freeze), hunter scanner grenades, online multiplayer with friends via room codes, controller support, XP, skins, an item shop and a Season 1 battle pass.",
   play:"https://deadsilencestudio.itch.io/prop-hunt",playLabel:"Play on itch.io"},
