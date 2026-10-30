@@ -21,5 +21,8 @@ window.GAMES = [
 window.TOOLS = [
  {id:"ds-beatmaker",title:"DS Beatmaker",tag:"Browser music maker",cover:"img/beatmaker.png",
   desc:"A browser-based beat maker with a step sequencer, a piano roll, and chiptune and ambient-horror synth presets. Export WAV loops and SFX for your games, no install needed.",
-  open:"tools/beatmaker/",openLabel:"Open in browser"}
+  open:"tools/beatmaker/",openLabel:"Open in browser"},
+ {id:"silent-pixel",title:"Silent Pixel",tag:"Pixel art & sprite animation",cover:"img/silentpixel.png",
+  desc:"DEAD SILENCE Studios' pixel art and sprite animation tool. Draw with layers and mirror tools, animate with onion skin and live FPS preview, then export game-ready sprite sheets with JSON, GIFs or frame packs.",
+  open:"tools/silentpixel/",openLabel:"Open in browser"}
 ];

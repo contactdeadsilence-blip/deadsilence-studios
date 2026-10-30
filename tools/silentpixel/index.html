@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>DEAD SILENCE Studios — Silent Pixel</title><link rel="icon" href="img/favicon.png"><link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="splash"><img src="img/logo-white.svg" alt="DEAD SILENCE Studios"><b>SILENT PIXEL</b><small>click / any key to skip</small></div>
+<header>
+ <div class="logo"><img src="img/mark-white.svg" alt=""><span>SILENT PIXEL</span></div>
+ <label>W <input id="cw" type="number" min="8" max="256" value="32"></label><label>H <input id="ch" type="number" min="8" max="256" value="32"></label>
+ <button data-sz="16">16</button><button data-sz="32">32</button><button data-sz="64">64</button><button id="resize">Resize</button>
+ <button id="grid" class="on" title="G">Grid</button><button id="undo" title="Ctrl+Z">Undo</button><button id="redo" title="Ctrl+Y">Redo</button>
+ <span class="sp"></span>
+ <button id="save">Save</button><button id="loadBtn">Load</button><input id="load" type="file" accept=".json" hidden>
+ <label>Scale <select id="scale"><option>1</option><option>2</option><option selected>4</option><option>8</option><option>16</option></select></label>
+ <button id="exPng">Frame PNG</button><button id="exSheet" class="acc">Sprite Sheet</button><button id="exGif">GIF</button><button id="exZip">Frames ZIP</button>
+</header>
+<main>
+ <aside id="tools"><h2>Tools</h2>
+  <div class="tl">
+   <button data-t="pencil" title="B">✎ Pencil</button><button data-t="eraser" title="E">⌫ Eraser</button><button data-t="fill" title="F">▧ Fill</button>
+   <button data-t="line" title="L">╱ Line</button><button data-t="rect" title="R">▭ Rect</button><button data-t="ellipse" title="O">◯ Ellipse</button>
+   <button data-t="picker" title="I">⊙ Picker</button><button data-t="select" title="M">⬚ Select/Move</button>
+  </div>
+  <label><input type="checkbox" id="filled"> Filled shapes</label>
+  <label><input type="checkbox" id="mx"> Mirror X</label><label><input type="checkbox" id="my"> Mirror Y</label>
+  <label>Brush <input id="brush" type="range" min="1" max="8" value="1"><span id="bv">1</span></label>
+  <h2>Color</h2><input id="color" type="color" value="#b0001e">
+  <select id="palSel"></select><div id="pal"></div>
+  <button id="addCol">+ Add color</button><button id="savePal">Save palette</button>
+ </aside>
+ <section id="stage"><canvas id="cv"></canvas><div id="info"></div></section>
+ <aside id="side"><h2>Layers</h2><div id="layers"></div>
+  <div class="row"><button id="lAdd">+</button><button id="lDel">−</button><button id="lUp">▲</button><button id="lDn">▼</button></div>
+  <label>Opacity <input id="lOp" type="range" min="0" max="1" step="0.05"></label>
+  <h2>Preview</h2><canvas id="pv" width="128" height="128"></canvas>
+ </aside>
+</main>
+<footer><h2>Timeline</h2>
+ <div class="row"><button id="play" title="Enter">▶ Play</button><label>FPS <input id="fps" type="number" min="1" max="60" value="8"></label>
+ <select id="mode"><option value="loop">Loop</option><option value="ping">Ping-pong</option></select>
+ <label><input type="checkbox" id="onPrev" checked> Onion prev</label><label><input type="checkbox" id="onNext"> Onion next</label>
+ <button id="fAdd">+ Frame</button><button id="fDup">Duplicate</button><button id="fDel">Delete</button><button id="fL">◀ Move</button><button id="fR">Move ▶</button></div>
+ <div id="frames"></div>
+ <p class="hint">B E F L R O I M tools · X/Y mirror · G grid · [ ] brush · , . frame · Enter play · Ctrl+Z/Y undo · wheel zoom · middle/space-drag pan · right-click erase</p>
+</footer>
+<script src="app.js"></script></body></html>
