@@ -1,6 +1,6 @@
 // Add new games by appending an object to this array.
 window.GAMES = [
- {id:"pixel-dudes-brawl",title:"Pixel Dudes Brawl",tag:"Online party brawler",cover:"img/pdb-cover.png",shots:["img/pdb-cover.png"],
+ {id:"pixel-dudes-brawl",featured:true,title:"Pixel Dudes Brawl",tag:"Online party brawler",cover:"img/pdb-cover.png",shots:["img/pdb-cover.png"],
   desc:"A chaotic pixel platform fighter for you and your friends. Brawl online or locally with controllers, run 2v2s and tournaments, grab melee weapons, unlock skins, hats, trails and KO effects in the store, and fight for the jackpot in the Money Pit, where coins never stop raining.",
   play:"https://pixel-dudes-brawl.onrender.com",playLabel:"Play in Browser",
   download:"https://github.com/contactdeadsilence-blip/pixel-dudes-brawl/releases/latest",downloadLabel:"Download for PC",platforms:"Windows · Mac · Linux"},
