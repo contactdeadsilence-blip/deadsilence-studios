@@ -38,3 +38,9 @@ footer{display:flex;justify-content:space-between;align-items:center;padding:40p
 .grid{grid-template-columns:repeat(2,1fr)}.card{aspect-ratio:16/10}
 .badge{display:inline-block;background:var(--ac);color:#fff;font-size:10px;font-weight:600;letter-spacing:.35em;text-transform:uppercase;padding:8px 14px}.badge.abs{position:absolute;top:18px;left:18px;z-index:2}.acts .ln{margin-top:0;align-self:center}
 @media(max-width:860px){.grid{grid-template-columns:1fr}.card{aspect-ratio:4/3}}
+.tgrid{display:grid;gap:2rem}
+.tool{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:2rem;align-items:center;border:1px solid var(--ln);padding:1.25rem}
+.tool .timg img{width:100%;display:block;border:1px solid var(--ln);filter:grayscale(.3) brightness(.85);transition:filter .6s}
+.tool:hover .timg img{filter:none}.tool:hover{border-color:var(--ac)}
+.tool h3{margin:0 0 .3rem}
+@media(max-width:760px){.tool{grid-template-columns:1fr}}

@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>DEAD SILENCE Studios — Beatmaker</title><link rel="icon" href="img/favicon.png"><link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="splash"><img src="img/logo-white.svg" alt="DEAD SILENCE Studios"><small>click / any key to skip</small></div>
+<header>
+ <div class="logo"><img src="img/mark-white.svg" alt=""><span>BEATMAKER</span></div>
+ <button id="play" title="Space">▶ Play</button><button id="stop">■ Stop</button>
+ <label>BPM <input id="bpm" type="number" min="40" max="240" value="128"></label>
+ <label>Swing <input id="swing" type="range" min="0" max="0.6" step="0.01" value="0"></label>
+ <label>Master <input id="master" type="range" min="0" max="1" step="0.01" value="0.8"></label>
+ <span class="sp"></span>
+ <button id="addSynth">+ Synth</button><button id="addDrum">+ Drum</button>
+ <button id="save">Save</button><button id="loadBtn">Load</button><input id="load" type="file" accept=".json" hidden>
+ <label>Loops <input id="loops" type="number" min="1" max="32" value="4" style="width:44px"></label>
+ <button id="export" class="acc">Export WAV</button><button id="exportOgg">Export OGG</button><span id="pad" title="Gamepad">🎮 –</span>
+</header>
+<main>
+ <section id="rack"><h2>Channel Rack</h2><div id="channels"></div></section>
+ <section id="roll"><h2>Piano Roll — <span id="rollName">select a synth channel</span>
+  <select id="preset"><option value="saw">Saw Lead</option><option value="square">Square</option><option value="bass">Bass</option><option value="pad">Pad</option><optgroup label="Chiptune"><option value="pulse">Pulse 25%</option><option value="chipsq">Chip Square</option><option value="tri">Triangle</option><option value="noise">Noise</option></optgroup><optgroup label="Ambient Horror"><option value="darkpad">Dark Pad</option><option value="drone">Drone</option><option value="bell">Eerie Bell</option></optgroup></select>
+  <span class="adsr">A<input data-k="a" type="range" min="0.001" max="2" step="0.001">D<input data-k="d" type="range" min="0.01" max="2" step="0.01">S<input data-k="s" type="range" min="0" max="1" step="0.01">R<input data-k="r" type="range" min="0.01" max="3" step="0.01">Cutoff<input data-k="cutoff" type="range" min="100" max="12000" step="10">Res<input data-k="q" type="range" min="0" max="20" step="0.1"></span></h2>
+  <div class="rollwrap"><canvas id="pr" width="1000" height="540"></canvas></div>
+  <p class="hint">Click empty cell: add note · click note: delete · drag right while adding: lengthen · Space / gamepad A: play/stop · D-pad: move step cursor · X: toggle step · LB/RB: channel</p>
+ </section>
+</main>
+<script src="app.js"></script></body></html>

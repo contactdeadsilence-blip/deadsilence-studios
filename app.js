@@ -18,4 +18,5 @@ function open(x){mb.innerHTML=`<p class="lbl">${x.tag}</p><h2>${x.title}</h2><di
 function close(){if(m.hidden)return;m.hidden=true;document.body.style.overflow='';history.replaceState(null,'',location.pathname)}
 GAMES.filter(x=>x.releaseApi).forEach(resolveDl);
 const h=GAMES.find(x=>x.id===location.hash.slice(1));if(h)open(h);
+(window.TOOLS||[]).forEach(t=>{const c=document.createElement('article');c.className='tool';c.innerHTML=`<a class="timg" href="${t.open}"><img src="${t.cover}" alt="${t.title}" loading="lazy"></a><div class="ttx"><h3>${t.title}</h3><p class="tag">${t.tag}</p><p>${t.desc}</p><div class="acts"><a class="btn" href="${t.open}">${t.openLabel||'Open'}</a></div></div>`;$('tgrid').appendChild(c)});
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.12});document.querySelectorAll('section,.card').forEach(el=>io.observe(el));

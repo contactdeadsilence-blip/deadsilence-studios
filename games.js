@@ -17,3 +17,9 @@ window.GAMES = [
   desc:"A co-op 3D climbing game for Solo, Duo, Trio and Quads. You and your friends are roped together on a giant mountain, climbing from the meadow, up the cliffs, to the snowy peak. Grab holds with each hand and leap for higher ones, but be careful: if one friend slips, the whole team can get dragged down. Stylized, colorful 3D, built controller-first.",
   follow:"https://deadsilencestudio.itch.io"}
 ];
+// Tools & Apps: add new tools by appending to this array.
+window.TOOLS = [
+ {id:"ds-beatmaker",title:"DS Beatmaker",tag:"Browser music maker",cover:"img/beatmaker.png",
+  desc:"A browser-based beat maker with a step sequencer, a piano roll, and chiptune and ambient-horror synth presets. Export WAV loops and SFX for your games, no install needed.",
+  open:"tools/beatmaker/",openLabel:"Open in browser"}
+];
