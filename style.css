@@ -34,3 +34,4 @@ footer{display:flex;justify-content:space-between;align-items:center;padding:40p
 @media(max-width:860px){.feat{grid-template-columns:1fr;gap:36px}.grid{grid-template-columns:1fr}.card{aspect-ratio:4/3}.ci p{opacity:1}section{padding:96px 6%}nav div a{margin-left:16px;font-size:9px;letter-spacing:.2em}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}section{opacity:1;transform:none}}
 .more{display:block}small{display:block}
+.oth{margin-top:6px}.oth a{border-bottom:1px solid var(--ln)}.oth a:hover{color:var(--fg)}
