@@ -12,5 +12,8 @@ window.GAMES = [
   play:"https://deadsilencestudio.itch.io/wildline-survival-run",playLabel:"Play on itch.io"},
  {id:"acreage-simulator",title:"Acreage Simulator",tag:"Land tycoon sim",cover:"img/acre-cover.jpg",shots:["img/acre-cover.jpg"],
   desc:"Buy, sell and upgrade! Build up your land empire one acre at a time.",
-  play:"https://deadsilencestudio.itch.io/acreage-simulator",playLabel:"Play on itch.io"}
+  play:"https://deadsilencestudio.itch.io/acreage-simulator",playLabel:"Play on itch.io"},
+ {id:"climb-together",title:"CLIMB TOGETHER",tag:"Co-op 3D climbing · Solo to Quads",soon:true,cover:"img/climb-cover.png",shots:["img/climb-cover.png"],
+  desc:"A co-op 3D climbing game for Solo, Duo, Trio and Quads. You and your friends are roped together on a giant mountain, climbing from the meadow, up the cliffs, to the snowy peak. Grab holds with each hand and leap for higher ones, but be careful: if one friend slips, the whole team can get dragged down. Stylized, colorful 3D, built controller-first.",
+  follow:"https://deadsilencestudio.itch.io"}
 ];
