@@ -20,3 +20,4 @@ section{max-width:1100px;margin:auto;padding:70px 5%}h2{font-size:20px;color:#ff
 .shots{display:flex;gap:10px;overflow-x:auto;margin:16px 0}.shots img{height:220px;max-width:100%;object-fit:cover;border:2px solid #2a2a3a}
 .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}small{color:#888}
 @media(max-width:560px){nav div a{margin-left:10px;font-size:12px}.shots img{height:150px}}
+.logo{display:flex;align-items:center;gap:8px}.logo img{height:30px}h1{animation:fl 4s infinite;text-shadow:none}.hlogo{width:min(420px,80vw);filter:drop-shadow(0 0 18px #ff335580)}
