@@ -44,3 +44,10 @@ footer{display:flex;justify-content:space-between;align-items:center;padding:40p
 .tool:hover .timg img{filter:none}.tool:hover{border-color:var(--ac)}
 .tool h3{margin:0 0 .3rem}
 @media(max-width:760px){.tool{grid-template-columns:1fr}}
+
+.flag{max-width:1400px;border-top:1px solid var(--ac)}.flag .fimg{border:0;overflow:visible}.flag .fimg>img{image-rendering:auto;border:1px solid var(--ln);box-shadow:0 30px 80px #8b0e1433}
+.fth{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}.fth img{aspect-ratio:16/10;object-fit:cover;border:1px solid var(--ln)}
+.flag .ftx h3{font-size:clamp(34px,5vw,60px);letter-spacing:.12em}.flag .btn:first-child{padding:20px 40px;font-size:13px;box-shadow:0 0 0 0 #8b0e1488;animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 16px #8b0e1400}100%{box-shadow:0 0 0 0 #8b0e1400}}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}.chips li{font-size:10px;letter-spacing:.2em;text-transform:uppercase;border:1px solid #ffffff33;padding:6px 10px;color:var(--fg)}
+@media(max-width:860px){.flag .btn:first-child{display:block;text-align:center;width:100%}}

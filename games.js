@@ -1,6 +1,10 @@
 // Add new games by appending an object to this array.
 window.GAMES = [
- {id:"pixel-dudes-brawl",featured:true,title:"Pixel Dudes Brawl",tag:"Online party brawler",cover:"img/pdb-cover.png",shots:["img/pdb-cover.png"],
+ {id:"bud-together",featured:true,flagship:true,title:"Bud Together",tag:"Co-op legal grow sim · 1–4 players",cover:"img/bt-cover.jpg",shots:["img/bt-cover.jpg","img/bt-1.jpg","img/bt-3.jpg","img/bt-4.jpg","img/bt-2.jpg"],
+  chips:["First-person co-op","1–4 players","Full Xbox controller support","Free in your browser"],
+  desc:"Our flagship game. Start a legal weed grow with up to 3 friends in first person. Plant, water and light your crop, then harvest, trim, dry, cure and burp the jars, weigh everything on the scale, and deliver orders for cash. Expand your rooms, build greenhouses and sheds piece by piece, kit them out with gear and lights, and grow your operation into an empire. It's like Schedule 1, but fully legal, so there are no cops. Runs right in your browser with full Xbox controller support, and your progress and purchases save.",
+  play:"https://bud-together.onrender.com",playLabel:"Play Free in Browser"},
+ {id:"pixel-dudes-brawl",title:"Pixel Dudes Brawl",tag:"Online party brawler",cover:"img/pdb-cover.png",shots:["img/pdb-cover.png"],
   desc:"A chaotic pixel platform fighter for you and your friends. Brawl online or locally with controllers, run 2v2s and tournaments, grab melee weapons, unlock skins, hats, trails and KO effects in the store, and fight for the jackpot in the Money Pit, where coins never stop raining.",
   play:"https://pixel-dudes-brawl.onrender.com",playLabel:"Play in Browser",
   download:"downloads/Pixel-Dudes-Brawl-Setup.exe",downloadLabel:"Download for Windows"},
