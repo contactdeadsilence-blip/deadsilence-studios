@@ -8,9 +8,10 @@ function resolveDl(x){fetch(x.releaseApi).then(r=>r.json()).then(r=>{const as=r.
  x.dlUrl=f[k];x.dlLabel='Download for '+EXT[k][1];x.others=Object.keys(f).filter(o=>o!==k).map(o=>({os:EXT[o][1],url:f[o]}));
  document.querySelectorAll(`[data-dl="${x.id}"]`).forEach(b=>{b.href=x.dlUrl;b.textContent=x.dlLabel;const p=b.parentNode,n=p.nextElementSibling;if(n&&n.classList.contains('oth'))n.remove();
   if(x.others.length)p.insertAdjacentHTML('afterend',`<small class="oth">Other platforms: ${x.others.map(o=>`<a href="${o.url}" download>${o.os}</a>`).join(' · ')}</small>`)})}).catch(()=>{})}
-const f=GAMES.find(x=>x.featured);
-if(f){$('featured').classList.toggle('flag',!!f.flagship);$('featured').innerHTML=`<div class="fimg"><img src="${f.cover}" alt="${f.title}">${f.flagship?`<div class="fth">${f.shots.slice(1,4).map(s=>`<img src="${s}" alt="" loading="lazy">`).join('')}</div>`:''}</div><div class="ftx"><h2 class="lbl">${f.flagship?'Flagship Game':'Featured'}</h2><h3>${f.title}</h3><p class="tag">${f.tag}</p>${f.chips?`<ul class="chips">${f.chips.map(c=>`<li>${c}</li>`).join('')}</ul>`:''}<p>${f.desc}</p>${acts(f)}<button class="ln more" data-id="${f.id}">View details →</button></div>`}
-GAMES.filter(x=>x!==f).forEach(x=>{const c=document.createElement('article');c.className='card';c.tabIndex=0;c.dataset.id=x.id;
+const FS=GAMES.filter(x=>x.featured);
+const fg=f=>`<div class="feat${f.flagship?' flag':''}${f.pixel?' px':''}"><div class="fimg"><img src="${f.cover}" alt="${f.title}">${f.flagship&&f.shots.length>1?`<div class="fth">${f.shots.slice(1,4).map(s=>`<img src="${s}" alt="" loading="lazy">`).join('')}</div>`:''}</div><div class="ftx"><h3>${f.title}</h3><p class="tag">${f.tag}</p>${f.chips?`<ul class="chips">${f.chips.map(c=>`<li>${c}</li>`).join('')}</ul>`:''}<p>${f.desc}</p>${acts(f)}<button class="ln more" data-id="${f.id}">View details →</button></div></div>`;
+if(FS.length){const fl=FS.every(x=>x.flagship);$('featured').innerHTML=`<h2 class="lbl">${fl?(FS.length>1?'Flagship Games':'Flagship Game'):'Featured'}</h2>${FS.map(fg).join('')}`}
+GAMES.filter(x=>!x.featured).forEach(x=>{const c=document.createElement('article');c.className='card';c.tabIndex=0;c.dataset.id=x.id;
  c.innerHTML=`${x.soon?'<span class="badge abs">Coming Soon</span>':''}<img src="${x.cover}" alt="${x.title}" loading="lazy"><div class="ci"><h3>${x.title}</h3><p>${x.tag}</p></div>`;$('grid').appendChild(c)});
 document.addEventListener('click',e=>{const t=e.target.closest('[data-id]');if(t)open(GAMES.find(x=>x.id===t.dataset.id));if(e.target===m||e.target.classList.contains('x'))close()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')close();if(e.key==='Enter'&&e.target.dataset.id)open(GAMES.find(x=>x.id===e.target.dataset.id))});
